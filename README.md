@@ -20,7 +20,7 @@
 
 ## About
 
-This project implements a **modular 32-bit ALU** in Verilog HDL, supporting 32 unique operations.  
+This project implements a modular **32-bit ALU** in Verilog HDL, supporting 32 unique operations.  
 It demonstrates practical digital design skills, modular code structure, and simulation proficiency—ideal for recruiters seeking candidates for **FPGA**, **VLSI**, or **hardware design roles**.
 
 - **Inputs:** Two 32-bit operands
@@ -41,8 +41,8 @@ It demonstrates practical digital design skills, modular code structure, and sim
 
 ## Architecture
 
-- **Main ALU Code:** [`main_alu_code`](alu32.v)
-- **Testbench:** [`alu_tb`](tb.v)
+- **Main ALU Code:** [`main_alu_code`](main_alu_code)
+- **Testbench:** [`alu_tb`](alu_tb)
 
 Each function is implemented as a separate, synthesizable module for clarity and scalability.
 
@@ -66,13 +66,13 @@ Each function is implemented as a separate, synthesizable module for clarity and
 
 ## References
 
-- [main_alu_code (alu32.v)](alu32.v) — All ALU operations and modules
-- [alu_tb (tb.v)](tb.v) — Testbench for automated simulation and waveform dump
-- [Verilog HDL Documentation](https://ieeexplore.ieee.org/document/1620780)
-- [Xilinx ISE Documentation](https://docs.xilinx.com/)
-- [Icarus Verilog User Guide](https://steveicarus.github.io/iverilog/)
-- [GTKWave User Manual](http://gtkwave.sourceforge.net/gtkwave.pdf)
-- [NPTEL Digital Design Course](https://nptel.ac.in/courses/117106114)
+- [`main_alu_code`](main_alu_code) — All ALU operations and modules
+- [`alu_tb`](alu_tb) — Testbench for automated simulation and waveform dump
+- [Verilog Wikipedia](https://en.wikipedia.org/wiki/Verilog)
+- [FPGA4Student: 32-bit ALU in Verilog](https://www.fpga4student.com/2017/08/verilog-code-for-32-bit-alu.html)
+- [Xilinx ISE Design Suite](https://www.xilinx.com/products/design-tools/ise-design-suite.html)
+- [Icarus Verilog](http://iverilog.icarus.com/)
+- [GTKWave](http://gtkwave.sourceforge.net/)
 
 ---
 
@@ -86,7 +86,7 @@ Each function is implemented as a separate, synthesizable module for clarity and
 
 2. **Compile & Simulate**
     ```sh
-    iverilog -o alu32_tb tb.v alu32.v
+    iverilog -o alu32_tb alu_tb main_alu_code
     vvp alu32_tb
     ```
 
@@ -123,6 +123,12 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Join the Conversation!
 
 💡 _Always open to feedback, collaboration, and exciting roles in digital hardware, FPGA, and VLSI design!_
+
+---
+
+```
+#Verilog #FPGA #DigitalDesign #HardwareDesign #RTL #Xilinx #IcarusVerilog #ALU #EDA #NPTEL #GTKWave
+```
 
 ---
 
