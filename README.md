@@ -118,8 +118,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Contact
 
 - **LinkedIn:** [Tejas R Mallah](https://www.linkedin.com/posts/tejas-r-mallah-28052b283_verilog-fpga-digitaldesign-activity-7364343834392113152-s981?utm_source=share&utm_medium=member_desktop&rcm=ACoAAET0mcABoSmVvowkUz7qcSZkG2bhRVZnDQ4)
-- **Email:** tejasmallah@gmail.com _(update as needed)_
-
+- **Email:** tejasmallah@gmail.com _
 ---
 
 ## Join the Conversation!
@@ -134,6 +133,3 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 ---
 
-```
-#Verilog #FPGA #DigitalDesign #HardwareDesign #RTL #Xilinx #IcarusVerilog #ALU #EDA #NPTEL #GTKWave
-```
