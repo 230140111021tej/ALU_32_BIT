@@ -68,11 +68,6 @@ Each function is implemented as a separate, synthesizable module for clarity and
 
 - [`main_alu_code`](main_alu_code) — All ALU operations and modules
 - [`alu_tb`](alu_tb) — Testbench for automated simulation and waveform dump
-- [Verilog Wikipedia](https://en.wikipedia.org/wiki/Verilog)
-- [FPGA4Student: 32-bit ALU in Verilog](https://www.fpga4student.com/2017/08/verilog-code-for-32-bit-alu.html)
-- [Xilinx ISE Design Suite](https://www.xilinx.com/products/design-tools/ise-design-suite.html)
-- [Icarus Verilog](http://iverilog.icarus.com/)
-- [GTKWave](http://gtkwave.sourceforge.net/)
 - **Academic Courses:**
   - [NPTEL: Digital Design (EE180)](https://onlinecourses.nptel.ac.in/noc25_ee180/preview)
   - [NPTEL: VLSI Design (CS155)](https://onlinecourses.nptel.ac.in/noc25_cs155/preview)
