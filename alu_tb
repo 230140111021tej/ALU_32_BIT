@@ -1,0 +1,60 @@
+`include "alu32.v"
+
+module tb;
+  reg [31:0] a;
+  reg [31:0] b;
+  reg [4:0]  s;
+  wire [31:0] out;
+  wire carry;
+  wire [31:0] mulhi;
+
+  // Instantiate DUT (positional mapping)
+  alu32 DUT (a, b, s, out, carry, mulhi);
+
+  initial begin
+    $dumpfile("alu32.vcd");
+    $dumpvars(0, tb);
+
+    $monitor($time, " s=%0d | a=%h, b=%h | out=%h | carry=%b | mulhi=%h", 
+             s, a, b, out, carry, mulhi);
+
+    // Apply inputs
+    a = 32'h0000FF0A; 
+    b = 32'h0000EEEE;
+
+    // Manually set operation select one after another
+    s = 0;  #20;   // ADD
+    s = 1;  #20;   // SUB
+    s = 2;  #20;   // MUL
+    s = 3;  #20;   // DIV
+    s = 4;  #20;   // NOT
+    s = 5;  #20;   // AND
+    s = 6;  #20;   // NAND
+    s = 7;  #20;   // OR
+    s = 8;  #20;   // NOR
+    s = 9;  #20;   // GRAY→BIN (b)
+    s = 10; #20;   // COMP
+    s = 11; #20;   // 2's COMP (a)
+    s = 12; #20;   // 2's COMP (b)
+    s = 13; #20;   // 1's COMP (a)
+    s = 14; #20;   // 1's COMP (b)
+    s = 15; #20;   // EQUAL
+    s = 16; #20;   // GRAY→BIN (a)
+    s = 17; #20;   // BIN→GRAY (b)
+    s = 18; #20;   // BIN→GRAY (a)
+    s = 19; #20;   // XOR
+    s = 20; #20;   // XNOR
+    s = 21; #20;   // Logical AND
+    s = 22; #20;   // Logical OR
+    s = 23; #20;   // Logical NOT
+    s = 24; #20;   // INC
+    s = 25; #20;   // DEC
+    s = 26; #20;   // Shift Right
+    s = 27; #20;   // RESET
+    s = 28; #20;   // BIT REVERSE
+    s = 29; #20;   // Parity A
+    s = 30; #20;   // Parity B
+    s = 31; #20;   // Shift Left
+    #20 $finish; // Stop simulation after last case
+  end
+endmodule
