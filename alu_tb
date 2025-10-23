@@ -1,5 +1,7 @@
-`include "alu32.v"
+// Purpose: 32-bit ALU with 32 operations including arithmetic, logic, code conversion, bit reversal, parity, and shift
 
+// Testbench to verify all ALU operations
+`include "alu32.v"
 module tb;
   reg [31:0] a;
   reg [31:0] b;
@@ -8,21 +10,17 @@ module tb;
   wire carry;
   wire [31:0] mulhi;
 
-  // Instantiate DUT (positional mapping)
+  // ALU instance
   alu32 DUT (a, b, s, out, carry, mulhi);
 
   initial begin
     $dumpfile("alu32.vcd");
     $dumpvars(0, tb);
+    $monitor($time, " s=%0d | a=%h, b=%h | out=%h | carry=%b | mulhi=%h", s, a, b, out, carry, mulhi);
 
-    $monitor($time, " s=%0d | a=%h, b=%h | out=%h | carry=%b | mulhi=%h", 
-             s, a, b, out, carry, mulhi);
-
-    // Apply inputs
+    // Apply inputs and run through all opcodes
     a = 32'h0000FF0A; 
     b = 32'h0000EEEE;
-
-    // Manually set operation select one after another
     s = 0;  #20;   // ADD
     s = 1;  #20;   // SUB
     s = 2;  #20;   // MUL
@@ -55,6 +53,6 @@ module tb;
     s = 29; #20;   // Parity A
     s = 30; #20;   // Parity B
     s = 31; #20;   // Shift Left
-    #20 $finish; // Stop simulation after last case
+    #20 $finish;
   end
 endmodule
