@@ -73,6 +73,13 @@ Each function is implemented as a separate, synthesizable module for clarity and
 - [Xilinx ISE Design Suite](https://www.xilinx.com/products/design-tools/ise-design-suite.html)
 - [Icarus Verilog](http://iverilog.icarus.com/)
 - [GTKWave](http://gtkwave.sourceforge.net/)
+- **Academic Courses:**
+  - [NPTEL: Digital Design (EE180)](https://onlinecourses.nptel.ac.in/noc25_ee180/preview)
+  - [NPTEL: VLSI Design (CS155)](https://onlinecourses.nptel.ac.in/noc25_cs155/preview)
+- **Research Papers:**
+  - [A 32-bit ALU for high-performance embedded processors](https://ieeexplore.ieee.org/document/10968047)
+  - [Design and Implementation of ALU Based on FPGA](https://ieeexplore.ieee.org/document/10940212)
+  - [Design of high speed and area efficient ALU using Verilog](https://ieeexplore.ieee.org/document/9696935)
 
 ---
 
@@ -86,8 +93,8 @@ Each function is implemented as a separate, synthesizable module for clarity and
 
 2. **Compile & Simulate**
     ```sh
-    iverilog -o alu32_tb alu_tb main_alu_code
-    vvp alu32_tb
+    iverilog -o [testbench_name.vvp] [testbench_name.v]
+    vvp [testbench_name.vvp]
     ```
 
 3. **View Waveforms**
@@ -116,7 +123,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 ## Contact
 
 - **LinkedIn:** [Tejas R Mallah](https://www.linkedin.com/posts/tejas-r-mallah-28052b283_verilog-fpga-digitaldesign-activity-7364343834392113152-s981?utm_source=share&utm_medium=member_desktop&rcm=ACoAAET0mcABoSmVvowkUz7qcSZkG2bhRVZnDQ4)
-- **Email:** tejasrmallah@email.com _(update as needed)_
+- **Email:** tejasmallah@gmail.com _(update as needed)_
 
 ---
 
